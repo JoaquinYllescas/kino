@@ -1,11 +1,18 @@
 
+//Verde
 @colorPrincipal: #24aa92;
+//Negro
+@colorSecudario: #171717;
+
 @fontPrincipal: 'Roboto', Arial, sans-serif;
 
 html, body, main{
   height: 100%;
   width: 100%;
-
+  background-color: @colorSecudario;
+}
+body{
+  overflow: hidden;
 }
 img{
   max-width: 100%;
@@ -26,13 +33,11 @@ section{
   background-position: center;
 
   .containHome{
-    position: absolute;
     width: 600px;
     height: 100px;
-    left: 50%;
-    top: 50%;
-    margin-left: -300px;
-    margin-top: -50px;
+    margin: 0px auto;
+    position: relative;
+    top: 40%;
 
     h1{
       color: @colorPrincipal;
@@ -55,9 +60,28 @@ section{
 
 
 header{
+  position: fixed;
+  left: -320px;
   width: 320px;
   height: 100%;
   background-color: @colorPrincipal;
+
+  transition-property: left;
+  transition-duration: .4s;
+  transition-timing-function: cubic-bezier(.02,.62,.45,.85);
+  transition-delay: 0s;
+
+  span.menu{
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: -60px;
+    display: block;
+    width: 60px;
+    height: 45px;
+    //background-color: @colorSecudario;
+    background-color: #fff;
+  }
 
   h1{
     text-indent: -999999px;
@@ -75,6 +99,7 @@ header{
 
 
   nav{
+    margin-top: 120px;
     ul{
       overflow: hidden;
 
@@ -82,8 +107,35 @@ header{
         display: block;
         font-family: @fontPrincipal;
         font-weight: 100;
+        text-align: center;
+        padding: 12px 0px;
+
+        transition-property: background-color;
+        transition-duration: .4s;
+        transition-timing-function: cubic-bezier(.02,.62,.45,.85);
+        transition-delay: 0s;
+
+        &:hover{
+          color: #fff;
+          background-color: #46bba6;
+        }
       }
     }
   }
 
+}
+
+header.headerOpen{
+  left: 0px;
+}
+
+.currentSection{
+  transition-property: margin-left;
+  transition-duration: .4s;
+  transition-timing-function: cubic-bezier(.02,.62,.45,.85);
+  transition-delay: 0s;
+}
+
+.currentSection.moveSection{
+  margin-left: 320px;
 }
