@@ -17,14 +17,14 @@
 //Tamanyos fuentes
 
 
-html, body, main{
+ body, main{
   height: 100%;
   width: 100%;
   background-color: @colorSecudario;
 }
 body{
-  overflow: hidden;
-}
+/*  overflow: hidden;
+*/}
 img{
   max-width: 100%;
 }
@@ -40,23 +40,26 @@ main{
 
 section{
   width: 100%;
-  height: 100%;
+  overflow: hidden;
   position: relative;
+  border-bottom: 1px solid white;
 }
 .home{
+  height: 100%;
   background-color: #1f1f1f;
   background-repeat: no-repeat;
   background-position: center;
 
 
   .containHome{
-    width: 600px;
+    width: 60%;
     height: 100px;
     margin: 0px auto;
     position: relative;
     top: 40%;
 
     h1{
+      white-space: pre-wrap;
       color: @colorPrincipal;
       text-align: center;
       padding-top: 30px;
@@ -65,6 +68,7 @@ section{
 
       span{
         font-weight: 100;
+        display: inline-block;
       }
     }
   }
@@ -78,8 +82,15 @@ section{
     width: 100%;
     color: @colorW;
     position: absolute;
-    bottom: 0px;
+    bottom: 10px;
     text-align: center;
+    height: 40px;
+
+    i{
+      display: block;
+      height: 40px;
+      width: 40px;
+    }
   }
 }
 
@@ -104,7 +115,7 @@ header{
     right: -50px;
     display: block;
     width: 50px;
-    height: 40px;
+    height: 100%;
     border-top-right-radius:4px;
     border-bottom-right-radius:4px;
   }
@@ -140,6 +151,7 @@ header{
         transition-timing-function: cubic-bezier(.02,.62,.45,.85);
         transition-delay: 0s;
 
+
         a{
           padding: 12px 0px;
           display: block;
@@ -162,6 +174,14 @@ header{
         &:hover{
           color: @colorW;
           background-color: #46bba6;
+        }
+
+        &.currentSection{
+          color: @colorW;
+          background-color: #46bba6 !important;
+          a{
+            color: @colorSecudario;
+          }
         }
       }
     }
@@ -197,7 +217,7 @@ header.headerOpen{
   position: relative;
   display: block;
   width: 38px;
-  height: 38px;
+  height: 100%;
   -webkit-touch-callout: none;
   user-select: none;
 }
@@ -557,7 +577,6 @@ header.headerOpen{
 .sobreMi, .trabajos, .contacto{
   p{
     text-align: center;
-    color:red;
   }
 }
 
@@ -567,21 +586,21 @@ header.headerOpen{
   }
 
   .yo{
-    display: inline-block;
-    width: 40%;
-    float: left;
+    display:block;
+    width: 100%;
     background-color: @colorW;
-    height: 100%;
+    height: 500px;
     margin: 0px;
     position: relative;
 
     .me{
-      position: absolute;
-      right: 0px;
+      margin: 0px auto;
+      /*position: absolute;
+      right: 0px;*/
       max-width: 490px;
       width: 250px;
       height: 100%;
-      //background-color: rgba(255, 0, 0, .2);
+      /*background-color: rgba(255, 0, 0, .2);*/
       display: table;
 
       .content{
@@ -589,48 +608,23 @@ header.headerOpen{
         vertical-align: middle;
 
         figure{
+          width: 300px;
+          margin: 0px auto;
           height: 360px;
           padding: 0px 20px 0px 10px;
           position: relative;
 
           img{
+            margin: 0px auto;
+            display: block;
             border: 6px solid @colorPrincipal;
             border-radius: 50%;
             max-width: 206px;
           }
-
-          .blackLayer{
-            height: 206px;
-            position: absolute;
-            background-color: rgba(0,0,0,.8);
-            width: 206px;
-            top: 6px;
-            border-radius: 50%;
-            left: 16px;
-            opacity: 0;
-            display: table;
-
-            .infoBlackLayer{
-              width:206px;
-              height: 70px;
-              position: absolute;
-              top: 50%;
-              margin-top: -35px;
-              overflow: hidden;
-
-              h3, p{
-                text-align: center;
-                color: @colorW;
-                font-family: @fontSecundaria;
-                font-size: 24px;
-                margin-left: -300px;
-                .VisibleH3BlackLayer;
-              }
-              p{
-                font-size: 46px;
-                margin-left: 300px;
-              }
-            }
+          
+          figcaption{
+            width: 260px;
+            margin: 20px auto 0px auto;
           }
 
         }
@@ -640,9 +634,10 @@ header.headerOpen{
           font-family: @fontSecundaria;
           font-weight: 700;
           font-size: 30px;
+          text-align: center;
 
           p{
-            text-align: left;
+            text-align: center;
             font-family: @fontSecundaria;
             color: @colorPrincipal;
             font-size: 16px;
@@ -653,7 +648,7 @@ header.headerOpen{
           font-family: @fontPrincipal;
           color: @colorSecudario;
           font-weight: 400;
-          text-align: left;
+          text-align: center;
           font-size: 12px;
           line-height: 15px;
           padding-top: 10px;
@@ -665,54 +660,44 @@ header.headerOpen{
   }
 
   .perfil{
-    display: inline-block;
-    float: left;
-    width: 60%;
-    background-color: @colorWG;
+    display: block;
+    width: 100%;
+    background-color: @colorPrincipal;
     height: 100%;
     margin: 0px;
     position: relative;
 
     .knowledge{
-      position: absolute;
-      left: 0px;
-      max-width: 710px;
-      width: 400px;
-      height: 100%;
-      //background-color: rgba(0, 255, 0, .2);
-      display: table;
-      padding: 0px 10px 0px 20px;
+      width: 100%;
+      overflow: hidden;
+      padding: 20px 0px;
+      /*display: table;*/
 
       .content{
-        display: table-cell;
         vertical-align: middle;
-        //background-color: red;
 
         ul{
+          overflow: hidden;
           display: block;
-          height: 360px;
-          padding-left: 10px;
+          text-align: center;
 
           li{
             float: left;
-            width: 100px;
+            width: 46%;
             height: 100px;
-            background-color: @colorG;
-            border-radius: 50%;
-            margin-right: 20px;
+/*            background-color: @colorG;*/            margin: 0px 2%;
             margin-bottom: 30px;
             overflow: hidden;
-            .ColorTransition;
+            
 
             i{
               display: block;
               width: 40px;
               height: 40px;
-              //margin:16px auto 0px auto;
-              margin:30px auto 0px auto;
+              margin:16px auto 0px auto;
               background-size: 1300%;
               background-image: url(../img/icons.svg);
-              .UpIcon;
+             
             }
 
             p{
@@ -720,12 +705,12 @@ header.headerOpen{
               font-family: @fontPrincipal;
               color: @colorW;
               font-size: 12px;
-              margin-left: 100px;
+              /*margin-left: 200px;*/
               white-space: nowrap;
               .LeftTextIcon;
             }
 
-            //li:hover
+           
             &:hover{
               background-color: @colorPrincipal;
 
@@ -746,218 +731,340 @@ header.headerOpen{
 }
 /*FIN Empieza seccion Sobre Mi*/
 
-//Empieza seccion TRABAJOS
-.trabajos > ul{
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 600px;
-  height: 320px;
-  margin: -160px auto 0px -300px;
 
-  li{
-    background-color: @colorG;
-    display: table;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
+
+/*Trabajos*/
+.trabajos{
+  position: relative;
+  ul{
     overflow: hidden;
-    margin-right: 75px;
-    float: left;
-    margin-bottom: 20px;
-    position: relative;
+    width: 400%;
+    background-color: @colorWG;
+    .AnimateWork;
+
+    li{
+      float: left;
+      position: relative;
+
+      img{
+        display: block;
+        width: 100%;
+        margin: 0px auto;
+      }
+
+      .seeMore{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color: @colorPrincipal;
+        position: absolute;
+        z-index: 1;
+        right: 10px;
+        bottom: 20px;
+        color: @colorW;
+        font-size: 22px;
+        text-align: center;
+        line-height: 38px;
+        cursor: pointer;
+      }
+    }
+  }
+
+}
+
+.controlsGaleria{
+  display: none;
+}
+
+.no-touchevents .controlsGaleria{
+    display: block;
+    height: 40px;
+    background-color: @colorPrincipal;
     cursor: pointer;
 
-    .ColorTransition;
-
-    &.tercerItem{
-      margin-right: 0px;
-    }
-
-    .hoverWork{
-      height: 150px;
-      /* overflow: hidden; */
-      width: 300px;
-      position: absolute;
-      .LeftTextIcon;
-
-      h3{
-        width: 150px;
-        height: 150px;
+    span{
+      display: inline-block;
+      height: 40px;
+      
+      i{
         display: block;
-        text-align: center;
-        font-family: @fontSecundaria;
-        font-size: 16px;
-        color: rgba(0,0,0,.8);
-        float: left;
-        line-height: 150px;
+        width: 40px;
+        height: 40px;
+        margin: 0px auto;
+      
+        
       }
-      span{
-        float: left;
-        width: 150px;
-        height: 150px;
-        line-height: 110px;
-        display: block;
-        text-align: center;
-        font-family: @fontPrincipal;
-        color: @colorW;
-        font-size: 14px;
+    }
+    span:hover i{
+        opacity:.5;
+      }
+  }
+/*FIN Trabajos*/
 
-        i{
+
+
+
+
+
+
+
+
+
+/*CONTACTO*/
+section.contacto{
+  position: relative;
+  background-color: @colorWG;
+  padding-bottom: 50px;
+  
+  h2{
+    padding-top: 20px;
+  }
+
+  p{
+    color: @colorSecudario;
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 20px;
+    text-align: center;
+    margin: 0px auto;
+    width: 60%;
+    font-family: @fontPrincipal;
+    font-weight: 100;
+    padding-bottom: 30px;
+  }
+  #contactForm{
+    overflow: hidden;
+    width: 80%;
+    display: block;
+    margin: 0px auto;
+
+    .grupo{
+      margin-bottom: 20px;
+      width: 100%;
+      height: 40px;
+      font-family: @fontPrincipal;
+      font-weight: 100;
+      font-size: 18px;
+      color: @colorPrincipal;
+      display: inline-table;
+      box-sizing:border-box;
+      
+      span{
+          display: table-cell;
           width: 40px;
           height: 40px;
-          display: block;
-          margin: 0px auto;
-          position: relative;
-          top: 40px;
-          background-size: 1300%;
-        }
+          background-color: @colorPrincipal;
+          vertical-align: middle;
+          padding: 0px;
+
+          i{
+            width: 20px;
+            height: 20px;
+            display: block;
+            margin: 0px auto;
+          }
+      }
+      
+
+      input{
+        box-sizing: border-box;
+        width: 100%;
+        height: 40px;
+        border: none;
+        color: @colorPrincipal;
+        font-family: @fontPrincipal;
+        font-weight: 100;
+        font-size: 14px;
+        padding-left: 5px;
       }
     }
 
-    //LI hover
-    &:hover{
-      background-color: @colorPrincipal;
+    textarea{
+      box-sizing:border-box;
+      width: 100%;
+      margin: 0px;
+      border: 0px;
+      color: @colorPrincipal;
+      font-family: @fontPrincipal;
+      font-weight: 100;
+      font-size: 14px;
+      padding: 10px;
+    }
 
-      .hoverWork{
-        margin-left: -150px;
+    .btFormContact{
+      display: block;
+      float: right;
+      width: 120px;
+      height: auto;
+      padding: 10px 0px;
+      text-align: center;
+      font-family: @fontPrincipal;
+      background-color: @colorPrincipal;
+      border: none;
+      color: @colorW;
+      font-size: 14px;
+      margin-top: 20px;
+      cursor: pointer;
+
+      &:disabled{
+        opacity:.5;
+        cursor:n-resize;
       }
+    }
+
+    .ng-invalid{
+      color: red !important;
     }
   }
 }
 
 
 
-    //Empieza TRABAJO
-    .myWork{
-      position: fixed;
-      top: 0px;
-      right: 0px;
-      width: 0%;
-      height: 0%;
-      background-color: @colorPrincipal;
-      overflow: hidden;
 
+@media screen and (min-width: 640px) {
 
-      .closeMyWork{
-        width: 100px;
-        height: 20px;
-        position: absolute;
-        right: 50px;
-        top: 10px;
-        background-color: transparent;
-        border: 1px solid @colorW;
-        font-family: @fontPrincipal;
-        font-size: 10px;
-        line-height: 20px;
-        text-align: center;
-        color: @colorW;
-        font-weight: lighter;
-        cursor: pointer;
-        .ColorTransition;
+  /*Mi foto y el texto*/
+  .sobreMi .yo{
+    height: 400px;
+  }
+  .sobreMi .yo .me .content figure{
+    width: 600px;
+    float: left;
+    height: auto;
 
-        &:hover{
-          background-color: @colorPrincipal;
-          border: 1px solid transparent;
+    img{
+      float: left;
+    }
+
+    figcaption{
+      float: left;
+      width: 360px;
+      margin-left: 20px;
+
+      h2{
+        text-align: left;
+        p{
+           text-align: left;
         }
       }
+      p.descripcion{
+        text-align: left;
+      }
+    }
 
-      .galeriaWork{
-        width: 800px;
-        height: 500px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-left: -400px;
-        margin-top: -250px;
-        overflow: hidden;
-        position: relative;
+  }
 
-        .descripcionWork{
-          position: absolute;
-          top: 100px;
-          right: 20px;
-          width: 250px;
+  /*Columnas iconos*/
+  .sobreMi .perfil .knowledge .content ul li{
+    width: 29.3%;
+  }
 
-          h3{
-            font-family: @fontSecundaria;
-            color: @colorPrincipal;
-            font-size: 18px;
-            text-align: left;
-            padding-bottom: 10px;
-          }
-          p{
-            line-height: 16px;
-            color: @colorW;
-            font-family: @fontPrincipal;
-            font-size: 12px;
-            text-align: left;
-          }
 
-          .tecnologiasWork{
-            overflow: hidden;
-            padding-top: 20px;
-            
-            ul{
-              overflow: hidden;
-              li{
-                width: 40px;
-                height: 40px;
-                float: left;
-                margin-right: 20px;
+  /*Galeria*/
+  .controlsGaleria{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    background-color: transparent !important;
 
-                i{
-                  display: block;
-                  height: 40px;
-                  width: 40px;
-                  img{
-                    display: block;
-                    height: 40px;
-                    width: 40px;
+    span{
+      position: absolute;
+      background-color: @colorPrincipal;
+      width: 40px;
+    }
+
+    & span:first-child{
+      left: 40px;
+    }
+
+    & span:last-child{
+      right: 40px;
+    }
+  }
+
+  .trabajos > ul li .seeMore{
+    right: 0px;
+    bottom: 45%;
+  }
+
+  .no-touchevents header .menu{
+    height: auto;
+  }
+
+
+  /*Formulario de contacto*/
+  .contacto #contactForm .grupo{
+    width: 48% !important;
+    float: left;
+  }
+  .contacto #contactForm > .grupo2 {
+   float: right;
+   
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .sobreMi{
+    .perfil{
+
+            .knowledge{
+
+              .content{
+
+                ul{
+                  max-width: 768px;
+                  margin: 0px auto;
+
+                  li{
+                    display: inline-block;
+                    float: none;
+                    width: 20%;
+                    i{
+                      margin:30px auto 0px auto;  
+                      .UpIcon;
+                    }
+
+                    .porcentaje{
+                      margin-top: 10px;
+                    }
+
+                    &:hover{
+                    i{
+                      margin: 16px auto 0px auto !important;
+                    }
+
                   }
+                  }
+                  
                 }
               }
             }
-          }
-        }
+    }  
+  }
 
-        .works{
-          width: 2400px;
-          height: 100%;
-          overflow: hidden;
 
-          li{
-            width: 800px;
-            height: 100%;
-            display: block;
-            float: left;
-          }
+  .trabajos{
+
+    .controlsGaleria{
+      max-width: 800px;
+      left: 50%;
+      margin-left: -400px;
+    }
+
+    ul{
+      li{
+        img{
+          max-width: 800px !important;    
         }
       }
-
-
     }
+  }
 
-    .workUnActive{
-      .AperturaMyWorkActive;
+  .contacto{
+    form{
+      max-width: 630px !important;
     }
-    .workActive{
-      .AperturaMyWork;
-    }
-
-
-    //FIN Empieza TRABAJO
-
-
-//FIN Empieza seccion TRABAJOS
-
-
-
-
-
-
-
-
-
-
+  }
+  
+}

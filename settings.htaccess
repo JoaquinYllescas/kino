@@ -1,2 +1,2 @@
-image/svg+xml svg
-image/svg+xml svgz
+AddType image/svg+xml svg
+AddType image/svg+xml svgz

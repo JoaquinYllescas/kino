@@ -1,0 +1,1 @@
+var app=angular.module("aplicacion",[]);app.controller("controladorForm",["$scope",function(o){o.formTitle="Formulario de login",o.formAction="Login",o.submit=function(o){var a=o.username,r=o.email,e=o.message;console.log("Username:"+a+"<br/>Email:"+r+"<br/> Mensaje:"+e)}}]);

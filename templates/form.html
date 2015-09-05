@@ -1,0 +1,29 @@
+ <div class="trianguloEsquina">
+    <i class="icon-contact-w"></i>
+</div>
+<h2>
+	<i class="icon-contact-g"></i>
+</h2>
+<p>
+    Si quieres ponerte en contacto conmigo, por favor, hazlo a través de este formulario. <br/>Te atenderé enseguida.
+</p>
+
+ <form name="formKino" class="row" id="contactForm" ng-submit="submit(user)">
+    <div class="grupo">
+        <span>
+            <i class="icon-user-w"></i>
+        </span>
+        <input ng-model="user.username" placeholder="Nombre" class="" type="text" name="name" required/>
+    </div>
+    
+    <div class="grupo grupo2 ">
+        <span>
+            <i class="icon-email-w"></i>
+        </span>
+        <input ng-model="user.email" placeholder="E-mail" class="" type="email" name="email" required/>
+    </div>
+
+    <textarea ng-model="user.message" name="message" placeholder="Tu mensaje" class="" name="" id="" cols="30" rows="10" required></textarea>
+
+    <input ng-disabled="formKino.$invalid" class="btFormContact" type="submit" value="Send">
+</form>

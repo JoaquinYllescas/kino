@@ -1,8 +1,10 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" ng-app="aplicacion">
 <head>
     <meta charset="UTF-8">
     <title>JYR</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
     <link href='http://fonts.googleapis.com/css?family=Roboto:700,100,400' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Anton|Racing+Sans+One' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css"/>
@@ -13,7 +15,7 @@
 
         <div id="hamburger" class="hamburglar is-closed menu">
 
-            <div class="burger-icon">
+            <div id="btBurguer" class="burger-icon">
                 <div class="burger-container">
                     <span class="burger-bun-top"></span>
                     <span class="burger-filling"></span>
@@ -24,9 +26,9 @@
         </div>
 
         <h1>
-            <a href="/">
+            <a id="home" href="">
                 JYR
-                <img src="../img/logo.svg" alt="Joaquin Yllescas Ruiz"/>
+                <img src="img/logo.svg" alt="Joaquin Yllescas Ruiz"/>
             </a>
         </h1>
 
@@ -43,11 +45,13 @@
         <!--HOME-->
         <section class="home ">
             <div class="containHome">
-                <img class="logo" src="../img/logo.svg" alt="Joaqui Yllescas Ruiz"/>
-                <h1>JOAQUIN YLLESCAS <span>DESARROLLADOR WEB</span> |</h1>
+                <img class="logo" src="img/logo.svg" alt="Joaqui Yllescas Ruiz"/>
+                <h1>JOAQUIN YLLESCAS <span>DESARROLLADOR WEB</span> &nbsp;|</h1>
             </div>
 
-            <div class="scrollDown">SCROLL DOWN</div>
+            <div class="scrollDown">
+                <i class="icon-scroll-w"></i>
+            </div>
         </section>
         <!--FIN HOME-->
 
@@ -55,18 +59,15 @@
 
         <!--SOBRE MI-->
         <section class="sobreMi">
+            <div class="trianguloEsquina">
+                <i class="icon-user-w"></i>
+            </div>
             <div class="row">
                 <div class="yo">
                     <div class="me">
                         <div class="content">
                             <figure>
                                 <img src="img/yo.png" alt="Desarrollador Web"/>
-                                <div class="blackLayer">
-                                    <div class="infoBlackLayer">
-                                        <h3>HTML5</h3>
-                                        <p>90%</p>
-                                    </div>
-                                </div>
                                 <figcaption>
                                     <h2>100%<p>Front End Developer</p></h2>
                                     <p class="descripcion">Maquetador y Desarrollador Front-End. Cuatro años y medio de experiencia en landings, websites, portales, banners, emailigns etc</p>
@@ -84,47 +85,52 @@
                                 <li data-tecnology="HTML" data-percentage="90%">
                                     <i class="icon-html5-w"></i>
                                     <p>HTML5</p>
+                                    <p class="porcentaje">90%</p>
                                 </li>
                                 <li data-tecnology="CSS3" data-percentage="90%">
                                     <i class="icon-css3-w"></i>
                                     <p>CSS3-Less</p>
+                                    <p class="porcentaje">90%</p>
                                 </li>
                                 <li data-tecnology="jQuery" data-percentage="70%">
                                     <i class="icon-jquery-w"></i>
                                     <p>jQuery</p>
+                                    <p class="porcentaje">70%</p>
                                 </li>
                                 <li class="slideIcons" data-tecnology="RWD" data-percentage="80%">
                                     <i class="icon-computer-w"></i>
                                     <p>RWD</p>
+                                    <p class="porcentaje">80%</p>
                                 </li>
                                 <li data-tecnology="Bootstrap" data-percentage="65%">
                                     <i class="icon-bootstrap"></i>
                                     <p>Bootstrap</p>
+                                    <p class="porcentaje">65%</p>
                                 </li>
                                 <li data-tecnology="Codekit" data-percentage="70%">
                                     <i class="icon-codekit-w"></i>
                                     <p>Codekit-Scout</p>
+                                    <p class="porcentaje">70%</p>
                                 </li>
                                 <li class="slideIcons1" data-tecnology="Design" data-percentage="60%">
                                     <i class="icon-ps-w"></i>
                                     <p>Ps-Ai-Sketch</p>
+                                    <p class="porcentaje">60%</p>
                                 </li>
                                 <li data-tecnology="PHP" data-percentage="50%">
                                     <i class="icon-php-w"></i>
                                     <p>PHP-MySQL</p>
+                                    <p class="porcentaje">50%</p>
                                 </li>
                                 <li data-tecnology="Git" data-percentage="55%">
                                     <i class="icon-git-w"></i>
                                     <p>Git</p>
+                                    <p class="porcentaje">55%</p>
                                 </li>
+
                             </ul>
                         </div>
                     </div>
-
-                    <div class="trianguloEsquina">
-                        <i class="icon-user-w"></i>
-                    </div>
-
                 </div>
             </div>
         </section>
@@ -134,134 +140,48 @@
 
         <!--TRABAJOS-->
         <section class="trabajos">
-            <ul>
-                <li id="trabajo">
-                    <div class="hoverWork">
-                        <h3>
-                            MAX FACTOR
-                        </h3>
-                        <span>
-                            <i class="icon-plus-w"></i>
-                            VER MÁS
-                        </span>
-                    </div>
-                </li>
-
-
-                <li>
-                    <div class="hoverWork">
-                        <h3>
-                            Domino´s Pizza
-                        </h3>
-                        <span>
-                            <i class="icon-plus-w"></i>
-                            VER MÁS
-                        </span>
-                    </div>
-                </li>
-
-
-                <li class="tercerItem">
-                    <div class="hoverWork">
-                        <h3>
-                            FANDANGO FILMS
-                        </h3>
-                        <span>
-                            <i class="icon-plus-w"></i>
-                            VER MÁS
-                        </span>
-                    </div>
-                </li>
-
-
-                <li>
-                    <div class="hoverWork">
-                        <h3>
-                            C88
-                        </h3>
-                        <span>
-                            <i class="icon-plus-w"></i>
-                            VER MÁS
-                        </span>
-                    </div>
-                </li>
-
-
-                <li>
-                    <div class="hoverWork">
-                        <h3>
-                            ANIDA
-                        </h3>
-                        <span>
-                            <i class="icon-plus-w"></i>
-                            VER MÁS
-                        </span>
-                    </div>
-                </li>
-
-                <li class="tercerItem">
-                    <div class="hoverWork">
-                        <h3>
-                            BBVA
-                        </h3>
-                         <span>
-                            <i class="icon-plus-w"></i>
-                            VER MÁS
-                        </span>
-                    </div>
-
-                </li>
-
-            </ul>
-
-
-            <div class="myWork workUnActive">
-                <div class="closeMyWork">CERRAR TRABAJO</div>
-
-                <div class="galeriaWork">
-                    <div class="descripcionWork">
-                        <h3>BBVA vivienda</h3>
-                        <p>
-                            Lorem fistrum qué dise usteer de la pradera apetecan diodenoo llevame al sircoo. Caballo blanco caballo negroorl por la gloria de mi madre ese que llega ese que llega. Me cago en tus muelas condemor sexuarl qué dise usteer sexuarl me cago en tus muelas benemeritaar.
-                        </p>
-                        <div class="tecnologiasWork">
-                            <ul>
-                                <li><i class="icon-html5-w"></i></li>
-                                <li><i class="icon-css3-w"></i></li>
-                                <li><i class="icon-jquery-w"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <ul class="works">
-                        <li >
-                            <img src="img/proyectos/listado/bbva/desktop.png" alt="BBVA vivienda"/>
-                        </li>
-
-                        <li >
-
-                        </li>
-
-                        <li >
-
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!--Triángulo esquina-->
             <div class="trianguloEsquina">
                 <i class="icon-computer-w"></i>
             </div>
+            <ul id="galeriaTrabajos">
+                <li>
+                    <img data-name-mobile="dominos.jpg" data-name="dominos.png" src="img/trabajos/dominos.jpg" alt="Dominos Pizza">
+                    <i class="seeMore">+</i>
+                </li>
 
+                <li>
+                    <img data-name-mobile="bbva.jpg" data-name="bbva.png" src="img/trabajos/bbva.jpg" alt="BBVA">
+                    <i class="seeMore">+</i>
+                </li>
+
+                <li>
+                    <img data-name-mobile="juanHernanz.jpg" data-name="juanHernanz.png" src="img/trabajos/juanHernanz.jpg" alt="Juan Hernanz">
+                    <i class="seeMore">+</i>
+                </li>
+
+                <li>
+                    <img data-name-mobile="fandango.jpg" data-name="fandango.png" src="img/trabajos/fandango.jpg" alt="Fandango Films">
+                    <i class="seeMore">+</i>
+                </li>
+            </ul>
+
+            <div class="controlsGaleria">
+                <span id="avanzoDerecha" class="col6 ">
+                    <i class="icon-arrowRight-w"></i>
+                </span>
+
+                <span id="avanzoIzquierda" class="col6">
+                    <i class="icon-arrowLeft-w"></i>
+                </span>
+            </div>
         </section>
         <!--FIN TRABAJOS-->
 
 
 
         <!--CONTACTO-->
-        <section class="contacto">
-            <p>Esto es Contacto</p>
+        <section ng-controller="controladorForm" class="contacto" ng-include="'templates/form.html'" >
+
         </section>
         <!--FIN CONTACTO-->
 
@@ -271,7 +191,14 @@
     </main>
 </body>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/javascript-min.js"></script>
+<script src="js/min/modernizr.custom.48572.js"></script>
+<script src="js/min/jquery.min.js"></script>
+<script src="js/min/easingJquery.js"></script>
+
+<script src="js/hammer.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+
+<script src="js/min/angularApp-min.js"></script>
+<script src="js/min/javascript-min.js"></script>
 
 </html>
